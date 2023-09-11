@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Traffic Visualization</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Assuming your CSS file is named 'styles.css' -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Including Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-moment"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@1.1.1"></script>
+
+
+</head>
+<body>
+    <h1>IoT Traffic Visualization</h1>
+    
+    <div class="container">
+        <!-- Controls for selecting device and time granularity -->
+        <div class="controls">
+            <select id="deviceSelector">
+                <option value="">-- Select a Device --</option>
+                <!-- Options will be populated using JavaScript -->
+            </select>
+
+            <button onclick="fetchAndPlotData()">Load Data</button>
+        </div>
+
+        <!-- Charts for "all_device" -->
+        <h2 id="allDeviceData">All Devices Data Visualization</h2>
+
+        <canvas id="avgThroughputAllDevicesChart" style="display: none;"></canvas>
+        <canvas id="peakThroughputAllDevicesChart" style="display: none;"></canvas>
+        <canvas id="avgPacketSizeAllDevicesChart" style="display: none;"></canvas>
+        <canvas id="packetCountAllDevicesChart" style="display: none;"></canvas>
+        <canvas id="destinationsCountAllDevicesChart" style="display: none;"></canvas>
+        <canvas id="allDeviceTrafficChart" style="display: none;"></canvas>
+
+        <!-- Charts for specific device -->
+        <h2 id="specificDeviceData">Specific Device Data Visualization</h2>
+
+        <canvas id="throughputPerSecondDeviceChart" style="display: none;"></canvas>
+        <canvas id="avgThroughputDeviceChart" style="display: none;"></canvas>
+        <canvas id="peakThroughputDeviceChart" style="display: none;"></canvas>
+        <canvas id="avgPacketSizeDeviceChart" style="display: none;"></canvas>
+        <canvas id="packetCountDeviceChart" style="display: none;"></canvas>
+        <canvas id="uniqueDestinationsDeviceChart" style="display: none;"></canvas>
+        <canvas id="destinationTrafficDeviceChart" style="display: none;"></canvas>
+        <canvas id="packetSizeChart" style="display: none;"></canvas>
+
+    </div>
+
+    <!-- Including your JavaScript file -->
+    <script src="scripts.js"></script> <!-- Assuming your JavaScript file is named 'scripts.js' -->
+</body>
+</html>

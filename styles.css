@@ -1,0 +1,113 @@
+/* General styles for the body and fonts */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header style */
+h1 {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Container for all the content */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling the canvas for charts */
+canvas {
+    width: 100%;
+    max-width: 1000px;
+    height: 400px;
+    margin: 20px auto;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+/* Style for the select dropdown and button */
+select, button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* For any other informative text on the page */
+p.info {
+    font-size: 16px;
+    color: #777;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    canvas {
+        width: 90%;
+    }
+    
+    select, button {
+        width: 90%;
+    }
+}
+
+/* Dropdown and Button Alignment */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Hover & Focus Styles for Dropdowns */
+select:hover, select:focus {
+    border-color: #007bff;
+}
+
+
+canvas + canvas {
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 40px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#allDeviceData,
+#specificDeviceData {
+    display: none;
+}
+
